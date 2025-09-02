@@ -1,0 +1,194 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>mtip-cameo-plugin</groupId>
+  <artifactId>mtip-cameo-plugin</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>Modeling Tool Integration Plugin for Cameo Systems Modeler (MTIP-Cameo)</name>
+  <description>The MTIP Cameo Plugin allows exporting and importing of SysML v1.5 models to the HUDS XML format.</description>
+
+  <properties>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.nomagic</groupId>
+      <artifactId>magicdraw-openapi</artifactId>
+      <version>2022x</version>
+      <scope>system</scope>
+      <systemPath>${MAGIC_DRAW_INSTALL_DIRECTORY}/lib/classpath.jar</systemPath>
+    </dependency>
+
+    <dependency>
+      <groupId>com.nomagic.requirements</groupId>
+      <artifactId>text</artifactId>
+      <version>2022x</version>
+      <scope>system</scope>
+      <systemPath>${MAGIC_DRAW_INSTALL_DIRECTORY}/plugins/com.nomagic.requirements/text.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>com.nomagic.requirements</groupId>
+      <artifactId>requirements-api</artifactId>
+      <version>2022x</version>
+      <scope>system</scope>
+      <systemPath>${MAGIC_DRAW_INSTALL_DIRECTORY}/plugins/com.nomagic.requirements/requirements_api.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>com.nomagic.requirements</groupId>
+      <artifactId>requirements</artifactId>
+      <version>2022x</version>
+      <scope>system</scope>
+      <systemPath>${MAGIC_DRAW_INSTALL_DIRECTORY}/plugins/com.nomagic.requirements/requirements.jar</systemPath>
+    </dependency>
+
+    <dependency>
+      <groupId>com.nomagic.magicdraw.sysml</groupId>
+      <artifactId>sysml</artifactId>
+      <version>2022x</version>
+      <scope>system</scope>
+      <systemPath>${MAGIC_DRAW_INSTALL_DIRECTORY}/plugins/com.nomagic.magicdraw.sysml/sysml.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>com.nomagic.magicdraw.sysml</groupId>
+      <artifactId>sysml-api</artifactId>
+      <version>2022x</version>
+      <scope>system</scope>
+      <systemPath>${MAGIC_DRAW_INSTALL_DIRECTORY}/plugins/com.nomagic.magicdraw.sysml/sysml_api.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>com.nomagic.magicdraw.sysml</groupId>
+      <artifactId>sysml-constants</artifactId>
+      <version>2022x</version>
+      <scope>system</scope>
+      <systemPath>${MAGIC_DRAW_INSTALL_DIRECTORY}/plugins/com.nomagic.requirements/lib/com.nomagic.magicdraw.sysml-2022.2.0-168-7c289b26.jar</systemPath>
+    </dependency>
+
+    <dependency>
+      <groupId>com.nomagic.magicdraw.glossary</groupId>
+      <artifactId>glossary</artifactId>
+      <version>2022x</version>
+      <scope>system</scope>
+      <systemPath>${MAGIC_DRAW_INSTALL_DIRECTORY}/plugins/com.nomagic.magicdraw.glossary/glossary.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>com.nomagic.magicdraw.glossary</groupId>
+      <artifactId>glossary-api</artifactId>
+      <version>2022x</version>
+      <scope>system</scope>
+      <systemPath>${MAGIC_DRAW_INSTALL_DIRECTORY}/plugins/com.nomagic.magicdraw.glossary/glossary_api.jar</systemPath>
+    </dependency>
+
+    <dependency>
+      <groupId>com.nomagic.magicdraw.diagramtable</groupId>
+      <artifactId>diagramtable-api</artifactId>
+      <version>2022x</version>
+      <scope>system</scope>
+      <systemPath>${MAGIC_DRAW_INSTALL_DIRECTORY}/plugins/com.nomagic.magicdraw.diagramtable/diagramtable_api.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>com.nomagic.magicdraw.diagramtable</groupId>
+      <artifactId>diagramtable</artifactId>
+      <version>2022x</version>
+      <scope>system</scope>
+      <systemPath>${MAGIC_DRAW_INSTALL_DIRECTORY}/plugins/com.nomagic.magicdraw.diagramtable/diagramtable.jar</systemPath>
+    </dependency>
+
+    <dependency>
+      <groupId>com.nomagic.magicdraw.dependencymatrix</groupId>
+      <artifactId>dependencymatrix-api</artifactId>
+      <version>2022x</version>
+      <scope>system</scope>
+      <systemPath>${MAGIC_DRAW_INSTALL_DIRECTORY}/plugins/com.nomagic.magicdraw.dependencymatrix/dependencymatrix_api.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>com.nomagic.magicdraw.dependencymatrix</groupId>
+      <artifactId>dependencymatrix</artifactId>
+      <version>2022x</version>
+      <scope>system</scope>
+      <systemPath>${MAGIC_DRAW_INSTALL_DIRECTORY}/plugins/com.nomagic.magicdraw.dependencymatrix/dependencymatrix.jar</systemPath>
+    </dependency>
+
+    <dependency>
+      <groupId>com.nomagic.magicdraw.relationshipmap</groupId>
+      <artifactId>relationshipmap</artifactId>
+      <version>2022x</version>
+      <scope>system</scope>
+      <systemPath>${MAGIC_DRAW_INSTALL_DIRECTORY}/plugins/com.nomagic.magicdraw.relationshipmap/relationshipmap.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>com.nomagic.magicdraw.relationshipmap</groupId>
+      <artifactId>relationshipmap-api</artifactId>
+      <version>2022x</version>
+      <scope>system</scope>
+      <systemPath>${MAGIC_DRAW_INSTALL_DIRECTORY}/plugins/com.nomagic.magicdraw.relationshipmap/relationshipmap_api.jar</systemPath>
+    </dependency>
+
+    <dependency>
+      <groupId>com.nomagic.magicdraw.migration</groupId>
+      <artifactId>migration</artifactId>
+      <version>2022x</version>
+      <scope>system</scope>
+      <systemPath>${MAGIC_DRAW_INSTALL_DIRECTORY}/plugins/com.nomagic.magicdraw.migration/migration.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>com.nomagic.magicdraw.migration</groupId>
+      <artifactId>migration-api</artifactId>
+      <version>2022x</version>
+      <scope>system</scope>
+      <systemPath>${MAGIC_DRAW_INSTALL_DIRECTORY}/plugins/com.nomagic.magicdraw.migration/migration_api.jar</systemPath>
+    </dependency>
+
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.13.0</version>
+        <configuration>
+          <release>11</release>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.3.0</version>
+        <configuration>
+          <archive>
+            <manifest>
+              <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+              <mainClass>org.aero.mtip.MTIPCSMPlugin</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <profiles>
+    <profile>
+      <id>windows</id>
+      <activation>
+        <os>
+          <family>windows</family>
+        </os>
+      </activation>
+      <properties>
+        <MAGIC_DRAW_INSTALL_DIRECTORY>C:/Program Files/MagicDraw 2022x Refresh2</MAGIC_DRAW_INSTALL_DIRECTORY>
+      </properties>
+    </profile>
+    <profile>
+      <id>macos</id>
+      <activation>
+        <os>
+          <family>mac</family>
+        </os>
+      </activation>
+      <properties>
+        <MAGIC_DRAW_INSTALL_DIRECTORY>/Applications/MagicDraw</MAGIC_DRAW_INSTALL_DIRECTORY>
+      </properties>
+    </profile>
+  </profiles>
+</project>
