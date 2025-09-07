@@ -23,7 +23,7 @@
 
     <dependency>
       <groupId>com.nomagic.requirements</groupId>
-      <artifactId>text</artifactId>
+      <artifactId>requirements-text</artifactId>
       <version>2022x</version>
       <scope>system</scope>
       <systemPath>${MAGIC_DRAW_INSTALL_DIRECTORY}/plugins/com.nomagic.requirements/text.jar</systemPath>
@@ -56,6 +56,13 @@
       <version>2022x</version>
       <scope>system</scope>
       <systemPath>${MAGIC_DRAW_INSTALL_DIRECTORY}/plugins/com.nomagic.magicdraw.sysml/sysml_api.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>com.nomagic.magicdraw.sysml</groupId>
+      <artifactId>sysml-text</artifactId>
+      <version>2022x</version>
+      <scope>system</scope>
+      <systemPath>${MAGIC_DRAW_INSTALL_DIRECTORY}/plugins/com.nomagic.magicdraw.sysml/text.jar</systemPath>
     </dependency>
     <dependency>
       <groupId>com.nomagic.magicdraw.sysml</groupId>
@@ -109,6 +116,13 @@
       <scope>system</scope>
       <systemPath>${MAGIC_DRAW_INSTALL_DIRECTORY}/plugins/com.nomagic.magicdraw.dependencymatrix/dependencymatrix.jar</systemPath>
     </dependency>
+    <dependency>
+      <groupId>com.nomagic.magicdraw.dependencymatrix</groupId>
+      <artifactId>dependencymatrix-text</artifactId>
+      <version>2022x</version>
+      <scope>system</scope>
+      <systemPath>${MAGIC_DRAW_INSTALL_DIRECTORY}/plugins/com.nomagic.magicdraw.dependencymatrix/resources/text.jar</systemPath>
+    </dependency>
 
     <dependency>
       <groupId>com.nomagic.magicdraw.relationshipmap</groupId>
@@ -123,6 +137,13 @@
       <version>2022x</version>
       <scope>system</scope>
       <systemPath>${MAGIC_DRAW_INSTALL_DIRECTORY}/plugins/com.nomagic.magicdraw.relationshipmap/relationshipmap_api.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>com.nomagic.magicdraw.relationshipmap</groupId>
+      <artifactId>relationshipmap-md-prefuse</artifactId>
+      <version>2022x</version>
+      <scope>system</scope>
+      <systemPath>${MAGIC_DRAW_INSTALL_DIRECTORY}/plugins/com.nomagic.magicdraw.relationshipmap/lib/md_prefuse.jar</systemPath>
     </dependency>
 
     <dependency>
